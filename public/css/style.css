@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2:400,500,600,700,800|Roboto:300,400,500,700,900&display=swap');
+
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --main-color: #332a7c;
+    --main-txt-color: #332a7c;
+    --main-padding: 15px;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    background: #fff !important;
+
+}
+label{
+    font-weight:600 ;
+}
+
+.hide{
+    display: none;
+}
+.fa {
+    margin-right: 10px;
+}
+.venus-data-table img {
+    text-align: center;
+    width: 50px;
+    border-radius: 12px;
+}
+
+.deleteItem{
+    display: inline;
+
+}
+.deleteItem button{
+    border: none;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+.border-radius-12 {
+    border-radius: 12px;
+}
+
+.weight-800 {
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+.font-size-25{
+    font-size: 25px;
+}
+
+.wrapper {
+
+}
+
+.wrapper .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    height: 70px;
+    display: flex;
+    background: #F6F6FC;
+    margin-bottom: 45px;
+    color: var(--main-color);
+}
+
+
+.wrapper .top-nav .top-menu {
+    width: calc(100% );
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.wrapper .top-nav .top-menu .profile-img {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.wrapper .top-nav .top-menu .profile-img img{
+    width: 100%;
+}
+.wrapper .top-nav .top-menu  .fa{
+    font-size: 22px;
+}
+.wrapper .top-nav .top-menu  ul {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .top-nav .top-menu .li-settings{
+    position: relative;
+}
+.wrapper .top-nav .top-menu .card-settings  {
+    position: absolute;
+    top: 40px;
+    left: -5px;
+    display: none;
+}
+.wrapper .top-nav .top-menu .card-settings ul{
+    display: block;
+    width: 160px;
+}
+.wrapper .top-nav .top-menu .card-settings ul li {
+    color: var(--main-color);
+    font-weight: 600;
+    padding: 12px;
+
+}
+.wrapper .top-nav .top-menu .card-settings ul li:hover{
+    background-color: #f6f6f6;
+}
+
+.wrapper .top-nav .top-menu ul li a {
+    margin: 0 20px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.wrapper .top-nav .top-menu ul li a:hover {
+}
+
+
+.wrapper .sidebar {
+    position: fixed;
+    z-index: 1;
+    /*top: 70px;*/
+    height: 100vh;
+    background:   var(--main-color);
+    width: 220px;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+.wrapper .sidebar .logo {
+    margin: 5px auto 15px auto;
+    width: 70%;
+}
+.wrapper .sidebar .logo-icon{
+    margin: 10px auto 15px auto;
+    width: 45px;
+    display: none;
+}
+
+.wrapper .sidebar .logo img {
+    width: 100%;
+    margin: auto;
+}
+
+.wrapper .sidebar ul {
+    margin-top: 60px;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    position: relative;
+    text-transform: uppercase !important;
+    font-weight: 600;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 15px !important;
+    color: #EBEBEC;
+    white-space: nowrap;
+}
+
+.wrapper .sidebar ul li a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #CE1A27;
+    display: none;
+}
+
+.wrapper .sidebar ul li a span.icon {
+    margin-right: 0px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a span.title {
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active {
+    background: #fff;
+    border-radius: 20px 0px 0px 20px;
+    color: var(--main-color);
+    font-weight: bolder;
+
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before {
+    /*display: none;*/
+    /*display: block;*/
+}
+
+.wrapper .main-content {
+    position: static;
+    width: calc(100% - 220px);
+    margin-left: 220px;
+    transition: all 0.5s ease-in-out;
+
+
+}
+
+
+.wrapper.collapse-sidebar .sidebar {
+    width: 70px;
+    transition: all 0.5s ease-in-out;
+}
+.wrapper.collapse-sidebar .sidebar .logo-icon{
+    display: block;
+}
+.wrapper.collapse-sidebar .sidebar .logo {
+    display: none;
+}
+
+.wrapper.collapse-sidebar .sidebar ul li a {
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.wrapper.collapse-sidebar .sidebar ul li a span.icon {
+    margin: 0;
+}
+
+.wrapper.collapse-sidebar .sidebar ul li a span.title {
+    display: none;
+}
+
+.wrapper.collapse-sidebar .main-content {
+
+    width: calc(100% - 70px);
+    margin-left: 70px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*
+=============== Start DashBoard Styles ===============
+*/
+
+.dashboard {
+}
+
+.dashboard .card-welcome {
+    padding: 35px 35px;
+    margin-bottom: 25px;
+    background-color: #F25767;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    background-image: url(../imgs/illustration-welcome.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard .card-welcome {
+    font-weight: 100;
+}
+.data-table-div {
+    overflow: auto;
+}
+.data-table-div .venus-data-table {
+    width: 100%;
+}
+.card-thumbs .card{
+    overflow: hidden;
+    margin-bottom: 25px;
+    border-radius: 15px;
+
+}
+.card-thumbs .card .card-img{
+    height: 150px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.card-thumbs .card .card-body{
+    padding: 5px;
+}
+.card-thumbs .card img{
+    width: 100%;
+}
+/*
+=============== End Dashboard Styles ===============
+*/
+
+
+/*
+=============== Start Project Styles ===============
+*/
+.btn-new-project {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+
+/*
+=============== End Project Styles ===============
+*/
+
+
+/*
+=============== Start Client Styles ===============
+*/
+.index-client {
+
+}
+
+.index-client .top-div {
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index-client .btn-new-client .btn {
+    padding: 15px 22px;
+    border-radius: 19px;
+    background-color: #5358e2;
+    font-weight: bold;
+
+}
+
+.index-client .btn-new-client .btn:focus {
+    box-shadow: none;
+}
+
+
+.index-client .client-data-table tr {
+    margin: 15px;
+}
+.img-edit {
+    overflow: hidden;
+}
+.img-edit img{
+    width: 25%;
+    border-radius: 20px;
+
+}
+
+
+
+    /*
+    =============== End Client Styles ===============
+    */
+
+
+/*
+=============== Start Login Styles ===============
+*/
+
+body.body-login {
+    background: linear-gradient(to right, #002E49, #021b79) !important;
+}
+
+.card-login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-login .login-logo {
+    background-color: #fff;
+    padding: 10px;
+    width: 50%;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+}
+
+.card-login .card-body {
+}
+
+.card-login .login-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.card-login .card {
+    padding: 7% 5px;
+    border-radius: 28px;
+}
+
+.card-login .card input {
+
+    padding: 10px;
+    border-radius: 7px;
+    border-left: none;
+    outline: none;
+}
+
+.card-login .card input:focus {
+    box-shadow: none;
+}
+
+.card-login .card input:focus {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(2, 27, 121, 0.5) !important;
+    /*border: 1px solid #1b4b72 !important;*/
+    background-color: #FFf;
+}
+
+.card-login .card ::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: .8;
+}
+
+.card-login .card input, .card-login .card .input-group-text {
+    background-color: #eeeeee;
+    opacity: .8;
+    border: 0;
+    font-size: 14px;
+
+}
+
+.card-login .form-group {
+    margin: 15px auto;
+}
+
+.card-login .card .input-group-text {
+    border-radius: 7px 0 0 7px;
+    border-right: none;
+    padding: 15px 20px;
+
+
+}
+
+.card-login .card button {
+    border-radius: 7px;
+    background: #021b79;
+    padding: 10px;
+
+}
+
+.card-login .btn-link, .card-login .form-check {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: .6;
+    margin-left: 10px;
+    color: #021b79;
+}
+
+/*
+=============== End Login Styles ===============
+*/
+
+
+
+
+
+/*
+****************************************
+           Start Header Style
+****************************************
+*/
+.header{
+    position: relative;
+    color: #fff;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+
+}
+
+
+/*.header:before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    opacity: .7;*/
+/*    z-index: 1;*/
+/*    background: #000;*/
+
+/*}*/
+
+.header .navbar {
+    margin-bottom: 15px;
+}
+/*.navbar:before*/
+/*{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    opacity: .6;*/
+/*    z-index: -1;*/
+/*}*/
+.header .navbar {
+
+
+}
+.navbar .nav-item{
+    text-transform: uppercase;
+}
+.navbar .navbar-brand{
+    width: 150px;
+    overflow: hidden;
+}
+.navbar .navbar-brand img {
+    width: 100%;
+}
+.header nav .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color:#fff;
+    margin-right:15px
+}
+.header nav .dropdown-item{
+    font-size: .9em;
+    font-weight: 900;
+}
+.header nav .dropdown-item:focus{
+    background: #d12127;
+}
+
+
+.header nav .active > .nav-link{
+}
+
+.header .carousel{
+    width: 100%;
+    height: inherit;
+    color: #fff;
+    text-align: left;
+    position: relative;
+}
+
+.header .carousel .carousel-item img{
+    width: 100%;
+    /*height: inherit;*/
+    position: relative;
+
+}
+.header .carousel .carousel-item:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .4;
+    z-index: 1;
+    background: #000;
+
+}
+
+.header .carousel-caption{
+    position: absolute;
+    text-align: left;
+    left: 5%;
+    bottom: 0px;
+    z-index: 2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.header .carousel .carousel-item .carousel-caption h1{
+    font-weight: bolder;
+    text-align: left;
+    font-size: 35px;
+    color: #d12127;
+
+
+}
+.header .carousel .carousel-item  .carousel-caption p{
+    margin: 10px 0;
+    width: 90%;
+    line-height: normal;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.header .carousel .carousel-item .carousel-caption a{
+    display: inline-block;
+    border-radius: 100px;
+    padding: 12px 35px;
+    outline: none;
+    color: #fff;
+    background: #d12127;
+    border: 1px solid #d12127;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: all .3s ease-in-out;
+}
+.header  .carousel .carousel-item .carousel-caption a:hover{
+
+}
+.carousel-control-next {
+    left: 0 !important;
+    bottom: 165px !important;
+
+}
+.carousel-control-prev {
+    left: 0 !important;
+    bottom: 45px !important;
+
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+}
+.header .arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+
+}
+
+.header .arrow i {
+    margin-top: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 33px;
+    width: 33px;
+    line-height: 33px;
+    cursor: pointer;
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {  }
+
+/*// Small devices (landscape phones, less than 768px)*/
+@media (max-width: 768px) {
+    .header .carousel{
+        width: 100%;
+        height: inherit;
+        color: #fff;
+        text-align: left;
+        position: relative;
+    }
+    .header nav .nav-link {
+        margin-bottom: 15px;
+    }
+
+    .header .carousel-caption{
+        position: absolute;
+        text-align: left;
+        left: 15%;
+        top: -200px;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #d12127;
+
+    }
+    .header .carousel .carousel-item img{
+        width: auto;
+        height: 100%;
+        position: relative;
+
+    }
+    .header .carousel .carousel-item .carousel-caption h1{
+        font-weight: bolder;
+        text-align: left;
+        font-size: 16px;
+
+    }
+    .header .carousel .carousel-item  .carousel-caption p{
+        font-size: 14px;
+    }
+    .header .arrow {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+
+    }
+
+    .header .arrow i {
+        margin-top: 50px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        height: 33px;
+        width: 33px;
+        line-height: 33px;
+        cursor: pointer;
+    }
+
+
+}
+
+/*// Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+
+
+    .header .carousel{
+        width: 100%;
+        height: inherit;
+        color: #fff;
+        text-align: left;
+        position: relative;
+    }
+    .header .carousel-caption{
+        position: absolute;
+        text-align: left;
+        left: 15%;
+        top: 60px;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #d12127;
+
+    }
+    .header .carousel .carousel-item img{
+        width: auto;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+    }
+    .header .carousel .carousel-item .carousel-caption h1{
+        font-weight: bolder;
+        text-align: left;
+        font-size: 28px;
+
+    }
+    .header .carousel .carousel-item  .carousel-caption p{
+        font-size: 14px;
+        font-family: NexaRegular;
+    }
+    .header .arrow {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        display: none;
+
+    }
+
+}
+
+/*// Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+    .navbar .navbar-brand{
+
+    }
+    .header nav .nav-link {
+        font-weight: 900;
+
+    }
+}
+
+
+
+/*
+****************************************
+           End Header Style
+****************************************
+*/
+
+.tabs-choose{
+    margin-bottom: 0;
+}
+.tabs-choose li{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.tabs-choose li.active{
+  opacity: 1;
+}
+
+.tabs-content{
+background-color: #eee;
+    margin: 0 auto;
+    padding: 20px;
+}
+
